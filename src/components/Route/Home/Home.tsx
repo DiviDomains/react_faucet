@@ -140,7 +140,7 @@ export class Home extends Component<HomeProps, HomeState> {
                     <p>
                         If it's still down after a few hours, please reach out to us on
 
-                        <a href="https://github.com/DiviProject/Faucet/issues">
+                        <a href="https://github.com/DiviDomains/react_faucet">
                             Github
                         </a>
 

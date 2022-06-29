@@ -3,7 +3,7 @@ import * as superagent from 'superagent';
 /*
 * The API URL to query information from
 */
-export const API_URL = process.env.API_URL || 'https://faucet-api.diviproject.org'; // 'http://localhost:3001'
+export const API_URL = process.env.API_URL || 'https://faucet.divi.domains/'; // 'http://localhost:3001'
 
 /*
 * The supply API call.
