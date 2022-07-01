@@ -17,7 +17,7 @@ export class Api extends Component {
                 <h3>API Reference</h3>
                 <h4>
                     [GET]
-                    https://faucet-api.diviproject.org/print?address=[string]&amount=[number]
+                    https://faucet-api.divi.domains/print?address=[string]&amount=[number]
                 </h4>
                 <h5>Query Parameters</h5>
                 <p className="label">

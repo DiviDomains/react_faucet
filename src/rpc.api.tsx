@@ -3,7 +3,7 @@ import * as superagent from 'superagent';
 /*
 * The API URL to query information from
 */
-export const API_URL = process.env.API_URL || 'https://faucet.divi.domains/'; // 'http://localhost:3001'
+export const API_URL = process.env.API_URL || 'https://faucet-api.divi.domains'; // 'http://localhost:3001'
 
 /*
 * The supply API call.
@@ -12,7 +12,7 @@ export const API_URL = process.env.API_URL || 'https://faucet.divi.domains/'; //
 export async function Supply() {
     try {
         const payload = await superagent.get(`${API_URL}/supply`);
-        return payload.body.supply;
+        return payload.body.balance;
     } catch (error) {
         if (error) {
             return error;
@@ -29,7 +29,7 @@ export async function Supply() {
 export async function Blocks() {
     try {
         const payload = await superagent.get(`${API_URL}/blocks`);
-        return payload.body.blocks;
+        return payload.body.result;
     } catch (error) {
         if (error) {
             return error;

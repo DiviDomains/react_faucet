@@ -76,7 +76,8 @@ export class Home extends Component<HomeProps, HomeState> {
             }
 
         } catch (error) {
-            this.setState({ error: true, message: 'An error occurred'});
+            console.log(error)
+            this.setState({ error: true, message: error as string});
             setTimeout(() => {
                 this.setState({ error: false });
             }, 3000);
@@ -98,7 +99,7 @@ export class Home extends Component<HomeProps, HomeState> {
                 }, 3000);
             }
         } catch (error) {
-            this.setState({ error: true, message: 'An error occurred' });
+            this.setState({ error: true, message: error as string });
             setTimeout(() => {
                 this.setState({ error: false });
             }, 3000);
@@ -135,18 +136,19 @@ export class Home extends Component<HomeProps, HomeState> {
     public render() {
         return(
             <div className="page-wrap">
-                <div className="page-error">
-                    <h2>The Faucet is having issues connecting to the network</h2>
-                    <p>
-                        If it's still down after a few hours, please reach out to us on
+                { this.state.error &&
+                    <div className="page-error">
+                        <h2>The Faucet is having issues connecting to the network</h2>
+                        <p>
+                            If it's still down after a few hours, please reach out to us on
 
-                        <a href="https://github.com/DiviDomains/react_faucet">
-                            Github
-                        </a>
+                            <a href="https://github.com/DiviDomains/react_faucet">
+                                Github
+                            </a>
 
-                    </p>
-                </div>
-
+                        </p>
+                    </div>
+                }
                 <div className="faucet">
                     <h2>Print Testnet DIVI Coins</h2>
                     <h3>

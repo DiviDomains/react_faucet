@@ -23,7 +23,7 @@ export class Footer extends Component {
                     <div className="menu-items">
                         <Link className="link" to="/">Faucet</Link>
                         <Link className="link" to="/api">Faucet API</Link>
-                        <a className="link" href="https://diviscan.io">Block Explorer</a>
+                        <a className="link" href="https://blocks-testnet.divi.domains/">Block Explorer</a>
                     </div>
                 </div>
             </footer>
